@@ -76,7 +76,7 @@ def get__list_episode():
 
     for ep in dict["results"]:
         ep = {
-            "id": ep["id"],
+            "cod": ep["episode"],
             "name": ep["name"],
             "air_date": ep["air_date"]
             
