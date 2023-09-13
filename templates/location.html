@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="row">
+    <table>
+        <tr>
+        <th>Nome</td>
+        <th>Tipo</td>
+        <th>Dimensão</td>
+        </tr>
+    </table>
+    {% for loc in location %}
+
+    <table>
+        <tr>
+        <td>{{loc.name}}</td>
+        <td>{{loc.type}}</td>
+        <td>{{loc.dimension}}</td>
+        </tr>
+    </table>
+
+    {% endfor %}
+
+
+</div>   
+{% endblock %}
