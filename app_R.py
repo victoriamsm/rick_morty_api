@@ -64,4 +64,3 @@ def get__list_location():
     
     return render_template("location.html", location=dict["results"])
 
-
