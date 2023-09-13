@@ -1,8 +1,7 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div class="row">
-    <table>
+    <table class="table align-middle">
         <tr>
         <th>Id</td>
         <th>Nome</td>
@@ -11,7 +10,7 @@
     </table>
     {% for ep in episode %}
 
-    <table>
+    <table class="table align-middle">
         <tr>
         <td>{{ep.id}}</td>
         <td>{{ep.name}}</td>
@@ -21,6 +20,5 @@
 
     {% endfor %}
 
-
-</div>   
+ 
 {% endblock %}
