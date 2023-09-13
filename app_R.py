@@ -64,3 +64,27 @@ def get__list_location():
     
     return render_template("location.html", location=dict["results"])
 
+@app_Rick.route("/episode")
+def get__list_episode():
+
+    url = "https://rickandmortyapi.com/api/episode" 
+    response = urllib.request.urlopen(url) 
+    episode = response.read() 
+    dict = json.loads(episode) 
+
+    episode = []
+
+    for ep in dict["results"]:
+        ep = {
+            "id": ep["id"],
+            "name": ep["name"],
+            "air_date": ep["air_date"]
+            
+        }
+
+        episode.append(ep)
+    
+    return render_template("episode.html", episode=dict["results"])
+
+
+
