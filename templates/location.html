@@ -1,8 +1,7 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div class="row">
-    <table>
+    <table class="table align-middle">
         <tr>
         <th>Nome</td>
         <th>Tipo</td>
@@ -11,16 +10,13 @@
     </table>
     {% for loc in location %}
 
-    <table>
+    <table class="table align-middle">
         <tr>
         <td>{{loc.name}}</td>
         <td>{{loc.type}}</td>
         <td>{{loc.dimension}}</td>
         </tr>
-    </table>
 
     {% endfor %}
 
-
-</div>   
 {% endblock %}

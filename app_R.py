@@ -76,6 +76,7 @@ def get__list_episode():
 
     for ep in dict["results"]:
         ep = {
+            "id": ep["id"],
             "cod": ep["episode"],
             "name": ep["name"],
             "air_date": ep["air_date"]
@@ -86,4 +87,15 @@ def get__list_episode():
     
     return render_template("episode.html", episode=dict["results"])
 
+@app_Rick.route("/episode/<id>", methods=['GET'])
+def get_episode_id(id):
+    url = "https://rickandmortyapi.com/api/episode" + id
+    response = urllib.request.urlopen(url) 
+    data = response.read()
+    dict = json.loads(data)
+    for ep in dict["results"]:
+        if ep["id"] == id:
+            return id
+    
+        
 
