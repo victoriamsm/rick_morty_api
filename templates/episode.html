@@ -12,12 +12,13 @@
     {% for ep in episode %}
 
         <tr>
-        <td>{{ep.id}}</td>
+        <td><a href="/episode/{{ep.id}}" class="btn btn-outline-dark"">{{ep.id}}</a></td>
         <td>{{ ep.episode }}</td>
         <td>{{ep.name}}</td>
         <td>{{ep.air_date}}</td>
         </tr>
-
+        
     {% endfor %}
 </table>
+  
 {% endblock %}
