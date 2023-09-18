@@ -14,7 +14,7 @@ def get_list_characters_page():
 
 @app_Rick.route("/profile/<id>")
 def get_profile(id):
-    url = "https://rickandmortyapi.com/api/character" + id
+    url = "https://rickandmortyapi.com/api/character/" + id
     response = urllib.request.urlopen(url) 
     data = response.read()
     dict = json.loads(data)
@@ -89,7 +89,7 @@ def get__list_episode():
 
 @app_Rick.route("/episode/<id>", methods=['GET'])
 def get_episode_id(id):
-    url = "https://rickandmortyapi.com/api/episode" + id
+    url = "https://rickandmortyapi.com/api/episode/" + id
     response = urllib.request.urlopen(url) 
     data = response.read()
     dict = json.loads(data)
