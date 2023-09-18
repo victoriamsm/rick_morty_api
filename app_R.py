@@ -44,7 +44,7 @@ def get_list_characters():
     return {"characters":characters}
 
 @app_Rick.route("/location")
-def get__list_location():
+def get_list_location():
 
     url = "https://rickandmortyapi.com/api/location" 
     response = urllib.request.urlopen(url) 
@@ -65,7 +65,7 @@ def get__list_location():
     return render_template("location.html", location=dict["results"])
 
 @app_Rick.route("/episode")
-def get__list_episode():
+def get_list_episode():
 
     url = "https://rickandmortyapi.com/api/episode" 
     response = urllib.request.urlopen(url) 
@@ -87,15 +87,11 @@ def get__list_episode():
     
     return render_template("episode.html", episode=dict["results"])
 
-@app_Rick.route("/episode/<id>", methods=['GET'])
+@app_Rick.route("/episode/<id>")
 def get_episode_id(id):
     url = "https://rickandmortyapi.com/api/episode/" + id
     response = urllib.request.urlopen(url) 
     data = response.read()
     dict = json.loads(data)
-    for ep in dict["results"]:
-        if ep["id"] == id:
-            return id
-    
-        
 
+    return render_template("episode.html", episode=dict)
