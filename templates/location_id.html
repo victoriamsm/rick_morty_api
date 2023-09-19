@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <table class="table align-middle">
+        <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Tipo</th>
+        <th>Dimensão</th>
+        <th>Personagens</th>
+        </tr>
+    
+        <tr>
+        <td>{{location_id.id}}</td>
+        <td>{{location_id.name}}</td>
+        <td>{{location_id.type}}</td>
+        <td>{{location_id.dimension}}</td>
+        <td>{{location_id.residents}}</td>
+        </tr>
+
+</table>
+{% endblock %}

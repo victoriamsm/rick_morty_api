@@ -11,7 +11,7 @@
     {% for loc in location %}
 
         <tr>
-        <td>{{loc.name}}</td>
+        <td><a href="/location/{{loc.id}}" class="btn btn-outline-dark">{{loc.name}}</a></td>
         <td>{{loc.type}}</td>
         <td>{{loc.dimension}}</td>
         </tr>

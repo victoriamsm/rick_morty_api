@@ -3,22 +3,19 @@
 {% block content %}
     <table class="table align-middle">
         <tr>
-        <th>Id</td>
         <th>Episódio</td>
         <th>Nome</td>
         <th>Data de lançamento</td>
+        <th>Personagens</td>
         </tr>
-
-    {% for ep in episode %}
 
         <tr>
-        <td><a href="/episode/{{ep.id}}" class="btn btn-outline-dark">{{ep.id}}</a></td>
-        <td>{{ ep.episode }}</td>
-        <td>{{ep.name}}</td>
-        <td>{{ep.air_date}}</td>
+        <td>{{episode_id.episode}}</td>
+        <td>{{ episode_id.name}}</td>
+        <td>{{ episode_id.air_date }}</td>
+        <td>{{ episode_id.characters}}</td>
         </tr>
         
-    {% endfor %}
 </table>
   
 {% endblock %}
